@@ -179,34 +179,133 @@ Greek ($\alpha, \beta, \gamma, ...$) alphabets, and can be lower or upper case.
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{What do journals say?}
+We reviewed the Author Guidelines for a sample of 14 journals:
+\begin{multicols}{2}
 \bi
-  \item
+\item \emph{Bulletin of Mathematical Biology}
+\item \emph{Canadian Journal of Fisheries and Aquatic Sciences}
+\item \emph{Ecology}
+\item \emph{Ecology Letters}
+\item \emph{Evolution$^*$}
+\item \emph{Functional Ecology}
+\item \emph{Journal of Animal Ecology}
+\item \emph{Journal of the Royal Society Interface$^*$}
+\item \emph{Marine Ecology Progress Series}
+\item \emph{Methods in Ecology and Evolution}
+\item \emph{Molecular Biology and Evolution}
+\item \emph{Nature}
+\item \emph{PLOS ONE}
+\item \emph{Science}
+\item[\vspace{\fill}]
+\ei
+\end{multicols}
+
+$^*$Only two that have no no mention of equations.
+
+Minimal guidance in others -- almost exclusively restricted to typesetting aspects
+(such as bold for vectors).
+
+% rather than the broader considerations that we
+%present here.
+\end{frame}
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{Authors' responsibility}
+Onus for good notation should be on authors (rather than journals)
+because:
+\bi
+  \item notation should be decided early on in a study (possibly before deciding on a
+    particular journal)
+  \item ideally computer code will match the notation
+  \item  work may first appear in a technical document such as a thesis before being
+      submitted to a journal
+  \item Supporting Information of a paper often contains the full mathematical details of
+models and is not typeset or edited by publishers -- authors are responsibile for
+clarity
 \ei
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{Guidelines}
 \bi
-  \item
+  \item based on those traditionally used in mathematics and are in a somewhat
+    logical order
+  \item our aim is for them to be useful and adopted
+  \item though we anticipate exceptions for which they are purposefully
+    overlooked
+  \item use examples from common ecological models, our own fields of research and from evolutionary biology.
 \ei
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
-\bi
-  \item
-\ei
+\frametitle{1. Define all terms}
+
+Who recognises this equation?
+\eb
+E = mc^2
+\label{Emc2}
+\ee
+
+\pause Who knows what it means?
+
+\pause As written it does not any information as written, since the \red{letters are not
+defined}.
+
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{1. Define all terms}
+Common ecological example:
+\eb
+S = cA^z.
+\ee
+But also requires the definition of the terms to be understandable to all
+readers.
+
+Imperative to give the equation \red{\emph{and the definitions}} of its terms:
+\eb
+S = cA^z,
+\label{spAcurve}
+\ee
+where:
+\bi
+\item $S$ represents the number of species (of a particular taxonomic category)
+in area $A$
+\item constant $c$ is the
+  number of species that would be in one square unit
+\item dimensionless exponent $z$ quantifies the change in species number with area
+
+So (\ref{spAcurve}) represents an increase (because $z$ is typically around
+0.2-0.3) in species richness with area.
+
+Thus, immediately after an equation (as part of the same sentence)
+any previously undefined symbols should be defined using the phrase
+`where ...'.
+\end{frame}
+
+%----------------------------------------------------------
+
+
+The number one guideline is to define every term that is used in an equation.
+
+There is no need to define a term for a second time in the text, although a
+reminder may be warranted if the term was introduced much earlier in a lengthy
+article (and a table of notation can be helpful for complicated models).
+However, in line with the author guidelines of many journals, it can be
+desirable for tables and figures
+to be understandable on their own and so notation should be
+additionally defined in their captions.
+
+
+
 \bi
   \item
 \ei
@@ -236,92 +335,8 @@ Proofreading - mention KH paper
 
 
 
-We reviewed the Author Guidelines for a sample of 14 journals:
-\emph{Bulletin of Mathematical Biology},
-\emph{Canadian Journal of Fisheries and Aquatic Sciences},
-\emph{Ecology},
-\emph{Ecology Letters},
-\emph{Evolution},
-\emph{Functional Ecology},
-\emph{Journal of Animal Ecology},
-\emph{Journal of the Royal Society Interface},
-\emph{Marine Ecology Progress Series},
-\emph{Methods in Ecology and Evolution},
-\emph{Molecular Biology and Evolution},
-\emph{Nature},
-\emph{PLOS ONE} and
-\emph{Science}.
-There is minimal guidance regarding mathematical notation. Only two
-(\emph{Evolution} and \emph{Journal of the Royal Society Interface}) have
-no mention of equations, but the
-mathematical-related guidelines for
-the other journals are almost exclusively restricted to typesetting aspects
-(such as bold for vectors) rather than the broader considerations that we
-present here.
-
-Our guidance goes beyond typesetting, and is aimed to help authors
-think about the choice of notation to improve clarity and understanding.
-The onus for good notation should be on authors rather than journals (though
-ideally journals might adopt our guidelines),
-because:
-(i) notation should be decided early on in a study (possibly before deciding on a
-particular journal),
-(ii) work may first appear in a technical document such as a thesis before being
-submitted to a journal,
-(iii) the
-Supporting Information of a paper often contains the full mathematical details of
-models and is not typeset or edited by publishers, such that responsibility for
-clarity rests with the authors.
-
-Our guidelines are based on those traditionally used in mathematics
-and are in a somewhat logical order. Our aim
-is for them to be useful and adopted, though we anticipate exceptions for
-which they are purposefully overlooked.
-Where appropriate, we use examples from common ecological models,
-our own fields of research and from evolutionary biology.
-
 \section*{Guidelines}
 
-\subsection*{Define all terms}
-
-The number one guideline is to define every term that is used in an equation.
-For example, although readers will recognise the equation
-\eb
-E = mc^2,
-\label{Emc2}
-\ee
-it does not convey any information as written (since the letters are not
-defined). Similarly, many ecologists may be familiar with the equation
-\eb
-S = cA^z,
-\ee
-but it requires the definition of the terms to be understandable to all readers.
-For this reason, it is imperative to give the equation
-\emph{and the definitions} of its terms. For example,
-\eb
-S = cA^z,
-\label{spAcurve}
-\ee
-where $S$ represents the number of species (of a particular taxonomic category)
-in area $A$, the constant $c$ is the
-number of species that would be in one square unit, and the dimensionless
-exponent $z$
-quantifies the change in species number with area
-\citep{mcs07}.
-This indicates that
-(\ref{spAcurve}) represents an increase (because $z$ is typically around
-0.2-0.3) in species richness with area.
-Thus, immediately after an equation (as part of the same sentence)
-any previously undefined symbols should be defined using the phrase
-`where ...'.
-
-There is no need to define a term for a second time in the text, although a
-reminder may be warranted if the term was introduced much earlier in a lengthy
-article (and a table of notation can be helpful for complicated models).
-However, in line with the author guidelines of many journals, it can be
-desirable for tables and figures
-to be understandable on their own and so notation should be
-additionally defined in their captions.
 
 \subsection*{Use italics, boldface and capitalisation appropriately}
 
