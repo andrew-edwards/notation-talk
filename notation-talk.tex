@@ -392,7 +392,7 @@ standard deviation $\sigma$.
 \medskip
 Also use a Roman d for derivative and integral of variable $X$ with respect to time $t$:
 \eb
-\frac{\mbox{d}X}{\mbox{d}t} ~~~~~~\mbox{and}~~~~~~ \int f(x) \mbox{d}x
+\nonumber \frac{\mbox{d}X}{\mbox{d}t} ~~~~~~\mbox{and}~~~~~~ \int f(x) \mbox{d}x
 \ee
 
 \pause
@@ -409,10 +409,36 @@ Units should be given in Roman type to distinguish them from mathematical variab
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{3. Use subscripts appropriately}
+
+Subscripts represent different values of a quantity.
+
 \bi
-  \item
+\item $B_t$ -- biomass of a population in year $t$, where
+$t=1, 2, 3, ..., T$, and $T$ is the maximum year.
 \ei
+
+\pause
+
+\red{Cannot} then use:
+
+\bi
+\item $B_s$ -- biomass in spatial area $s$, where $s=1, 2, 3, ..., S$, and $S$
+  is the number of areas.
+  \ei
+
+\pause
+
+Because:
+
+\bi
+\item $t=1$ gives $B_1$ as the biomass in year 1
+
+\item $s=1$ also gives $B_1$ as the biomass in spatial area 1
+\ei
+
+Obvious confusion.
+
 \end{frame}
 
 %----------------------------------------------------------
@@ -536,14 +562,6 @@ Proofreading - mention KH paper
 
 
 \subsection*{Use subscripts appropriately}
-
-Subscripts are used to represent different values of a quantity.
-For example, define $B_t$ as the biomass of a population in year $t$, where
-$t=1, 2, 3, ..., T$, and $T$ represents the maximum year.
-Note that you cannot then
-use, say, $B_s$ to represent the biomass in spatial area $s$. This is
-because setting $t=1$ gives $B_1$ as the biomass in year 1. But
-setting $s=1$ also gives $B_1$, creating obvious confusion.
 
 In practice there may be interest in modelling the biomass in
 area $s$ in year $t$ (for various combinations of $s$ and $t$),
