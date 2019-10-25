@@ -555,37 +555,57 @@ is valid.
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{3. Use subscripts appropriately}
+
+\red{Source of confusion:} $i$ and $j$ as indices, but using one again in a summation:
+\eb
+\nonumber y_{\textcolor<2->{blue}{i}j} = 2 x_{\textcolor<2->{blue}{i}j} +
+  \sum_{\textcolor<3->{red}{i}=1}^N x_{\textcolor<3->{red}{i}j}
+\ee
+
 \bi
-  \item
+  \item \onslide<2-> $\blue{i}$ used on both sides here as an index (equation valid for all values
+    of $\blue{i}$)
+  \item \onslide<3-> $\red{i}$ used in summation as a dummy index
 \ei
+
+\onslide<4->
+Solution: use $k$ as a dummy index:
+\eb
+\nonumber y_{ij} = 2 x_{ij} + \sum_{\red{k}=1}^N x_{\red{k}j}
+\ee
+
+\onslide<5->
+Another way to understand:
+\eb
+\nonumber \sum_{\red{k}=1}^N x_{\red{k}j} = \sum_{\red{l}=1}^N x_{\red{l}j} = \sum_{\red{m}=1}^N x_{\red{m}j}
+\ee
+since $\red{k}, \red{l}$ and $\red{m}$ are just dummy indices.
+
+\end{frame}
+
+% Skipping: For spatio-temporal situations, an alternative to the aforementioned $B_{st}$
+% is using $Y_t(s)$ ....
+
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{}
+
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
 \frametitle{}
-\bi
-  \item
-\ei
+
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
 \frametitle{}
-\bi
-  \item
-\ei
-\end{frame}
 
-%----------------------------------------------------------
-
-\begin{frame}
-\frametitle{}
-\bi
-  \item
-\ei
 \end{frame}
 
 %----------------------------------------------------------
@@ -640,47 +660,7 @@ Proofreading - mention KH paper
 
 \section*{Guidelines}
 
-One source of confusion is having $i$ and $j$ as indices, but then using these
-again in a summation to sum $N$ values:
-\eb
-y_{ij} = 2 x_{ij} + \sum_{i=1}^N x_{ij}.
-\ee
-The problem is that $i$ is used here as an index, such that the equation is
-valid for all values of $i$, but then is also used in the summation where it
-is just a dummy index. A better formulation would be
-\eb
-y_{ij} = 2 x_{ij} + \sum_{k=1}^N x_{kj}
-\label{sumk}
-\ee
-where $k$ is a dummy index.
-Another way to understand this is to realise that
-the following are all equivalent:
-\eb
-\sum_{k=1}^N x_{kj} = \sum_{l=1}^N x_{lj} = \sum_{m=1}^N x_{mj},
-\ee
-because $k, l$ and $m$ are just dummy indices used to indicate the terms to
-be added together by the summation -- switching between them in (\ref{sumk})
-will not affect any related equations, whereas changing $i$ and $j$ likely will.
 
-For spatio-temporal situations, an alternative to the aforementioned $B_{st}$
-is using
-$Y_t(s)$ to represent the value of a random variable $Y$ at time $t$ and spatial
-location $s$ \citep{cw11}. For times $t_1, t_2$ and $t_3$, and spatial locations
-$s_1, s_2$ and $s_3$, such notation enabled \cite{cw11} to succinctly represent the
-spatial process at the fixed time $t_1$ as
-\eb
-{\bf Y}_{t_1} = \left(Y_{t_1}(s_1), Y_{t_1}(s_2), Y_{t_1}(s_3) \right)',
-\label{Yt1}
-\ee
-where $'$ represents the transpose,
-and the temporal process at the fixed spatial location $s_1$ as
-\eb
-{\bf Y}(s_1) = \left(Y_{t_1}(s_1), Y_{t_2}(s_1), Y_{t_3}(s_1) \right)'.
-\ee
-Note that ${\bf Y}_{t_1}$ and ${\bf Y}(s_1)$ are
-vectors of random variables but cannot be simultaneously lower-case bold
-(as vectors should be) and upper-case italics (as random variables should be),
-further emphasising the need for clear definitions.
 
 \subsection*{Be careful with superscripts}
 
