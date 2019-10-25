@@ -22,12 +22,13 @@ Friday 1st November, 2019}
 
 \setbeamertemplate{itemize items}{\includegraphics[scale=0.017]{images/halloween_pumpkin3.png}}
 \setbeamertemplate{itemize subitem}{\includegraphics[scale=0.017]{images/halloween_pumpkin2.png}}
-%\setbeamertemplate{itemize subsubitem}[ball]
+\setbeamertemplate{itemize subsubitem}{\includegraphics[scale=0.017]{images/halloween_pumpkin5.png}}
 
 \newcommand{\eb}{\begin{eqnarray}}
 \newcommand{\ee}{\end{eqnarray}}
 
-
+% \usefonttheme{serif}
+% \usepackage{mathptmx}    % Should have Times plus math fonts. AME used for Hake.
 \begin{document}
 
 \beamertemplatenavigationsymbolsempty   % bottom navigation panel
@@ -67,7 +68,7 @@ Friday 1st November, 2019}
 \begin{frame}
 \frametitle{Motivation}
 \bi
-\item mathematical modelling playing an increaing role in biology
+\item mathematical modelling playing an increasing role in biology
 \item \blue{requires communication of details of models}
 \item this includes notation
 \item \blue{clarity of notation varies between papers}
@@ -256,13 +257,14 @@ clarity
 
 Who recognises this equation?
 \eb
-E = mc^2
-\label{Emc2}
+\nonumber E = mc^2
 \ee
 
 \pause Who knows what it means?
 
-\pause As written it does not any information as written, since the \red{letters are not
+\medskip
+
+\pause It does not convey any information, since the \red{letters are not
 defined}.
 
 \end{frame}
@@ -273,16 +275,9 @@ defined}.
 \frametitle{1. Define all terms}
 Common ecological example:
 \eb
-S = cA^z.
+\nonumber S = cA^z
 \ee
-But also requires the definition of the terms to be understandable to all
-readers.
-
-Imperative to give the equation \red{\emph{and the definitions}} of its terms:
-\eb
-S = cA^z,
-\label{spAcurve}
-\ee
+\pause
 where:
 \bi
 \item $S$ represents the number of species (of a particular taxonomic category)
@@ -292,27 +287,51 @@ in area $A$
 \item dimensionless exponent $z$ quantifies the change in species number with area
 \ei
 
-So (\ref{spAcurve}) represents an increase (because $z$ is typically around
-0.2-0.3) in species richness with area.
+\pause
+So equation represents an increase in species richness with area.
 
-Thus, immediately after an equation (as part of the same sentence)
+\pause
+
+Immediately after an equation (as part of the same sentence)
 any previously undefined symbols should be defined using the phrase
-``where ...''.
+\red{``where ...''}.
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{1. Define all terms}
 
-The number one guideline is to define every term that is used in an equation.
+The number one guideline is to \red{define every term that is used in an equation}.
 
-There is no need to define a term for a second time in the text, although a
-reminder may be warranted if the term was introduced much earlier in a lengthy
-article (and a table of notation can be helpful for complicated models).
-However, in line with the author guidelines of many journals, it can be
-desirable for tables and figures
-to be understandable on their own and so notation should be
+\pause
+
+The number one guideline is to \red{define every term that is used in an equation}.
+
+\pause
+
+The number one guideline is to \red{define every term that is used in an equation}.
+
+\pause
+
+The number one guideline is to \red{define every term that is used in an equation}.
+
+\pause
+
+\medskip
+
+Maybe introduce a second time if appears again much later in a lengthy work.
+
+\medskip
+
+\red{Table of notation} helpful for for complicated models. TODO example
+
+\medskip
+
+\pause
+
+Desirable for tables and figures to be understandable on their own, so any
+notation in them should be
 additionally defined in their captions.
 
 
@@ -320,11 +339,33 @@ additionally defined in their captions.
 
 %----------------------------------------------------------
 
+% Sans serif fonts (like Arial) aren't great for math.
+
 \begin{frame}
-\frametitle{}
+\frametitle{2. Use italics, boldface and capitalisation appropriately}
+
+By convention, mathematical symbols (except Greek letters) should be italicised.
+
+Distinguishes text from mathematical notation:
+
 \bi
-  \item
+\item a large value of $a$
+\item a large value of a [much clearer in a serif font]
 \ei
+
+Vectors and matrices should be Roman script and bold:
+\bi
+\item {\bf a} is a vector
+\item {\bf A} is a matrix
+\item element $i$ of {\bf a} is often $a_i$
+\item element in row $i$ and column $j$ of {\bf A} is  $A_{ij}$ (or sometimes
+  $a_{ij}$)
+\ei
+
+
+Generic random variables are usually upper case:  $X$.
+
+Possible numeric values represented by the corresponding lower-case letter: $x$.
 \end{frame}
 
 %----------------------------------------------------------
@@ -464,21 +505,6 @@ Proofreading - mention KH paper
 
 \subsection*{Use italics, boldface and capitalisation appropriately}
 
-By convention, mathematical symbols (except Greek letters) should be italicised.
-This distinguishes text from
-mathematical notation -- for example,
-`a large value of $a$' is more comprehensible than
-`a large value of a'.
- However, vectors and matrices should be Roman script
-(not italicised) and bold,
-with vectors being lower case and matrices being upper case. So {\bf a} would
-be a vector and {\bf A} would be a matrix. Element $i$ of {\bf a} is
-often denoted $a_i$ and the element in row $i$ and column $j$ of {\bf A} is
-hence $A_{ij}$ (or $a_{ij}$, e.g.~\citealt{krey93, casw01}).
-A vector {\bf a} will usually be a column vector unless otherwise specified.
-Generic random variables are usually denoted by upper-case letters (like $X$),
-with possible numeric values represented by the corresponding lower-case letter
-($x$).
 
 Use Roman letters for standard mathematical functions such as sin, cos, log, ln
 and e$^x$, and
