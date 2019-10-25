@@ -475,25 +475,81 @@ calculations unambiguous.
 \red{Commas:} can use $B_{st}$ or $B_{s,t}$, but always use them to avoid
 ambiguity: $B_{3,17}$ rather than $B_{317}$.
 
+\end{frame}
+
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{3. Use subscripts appropriately}
+
+Abbreviations as (non-italicised) subscripts to indicate related
+definitions.
+
+\medskip
+
+For example, when modelling DNA records from sediments:
+\bi
+  \item $P_\mathrm{fp}$ -- probability of {\bf f}alse {\bf p}ositives
+  \item $P_\mathrm{fn}$ -- probability of {\bf f}alse {\bf n}egatives
+\ei
+\pause
+\medskip
+
+Fisheries:
+\bi
+  \item $B_\mathrm{MSY}$ -- biomass of a stock at the maximum sustainable yield (MSY)
+\ei
+So MSY is not an index (like $B_t$), but an acroynm that is non-italicised to
+distinguish from the related $B_t$.
+\pause
+\medskip
+
+Please please please avoid using acronyms such as $MSY$ to represent a variable.
 
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
-\bi
-  \item
-\ei
-\end{frame}
+\frametitle{3. Use subscripts appropriately}
 
-%----------------------------------------------------------
+Usually, a subscript as an index should appear on both sides of
+an equation:
+\eb
+\nonumber y_t = 2 x_t + 3,
+\ee
+for the relationship between two variables $x_t$ and $y_t$ at each time $t$
+% there is a value of $y_t$ corresponding to each setting of $t$.
 
-\begin{frame}
-\frametitle{}
+\pause
+
+Should generally \red{not} be a mixture of subscripts:
+\eb
+\nonumber y_t = 2 x_i + 3.
+\ee
+
+% Else $y_t$ depends on the value of $x_i$, and therefore on $i$.
+
+\medskip
+
+Can lead to confusion:
 \bi
-  \item
+  \item $y_t = 9$ for $x_1 = 3$ (with $i=1$)
+  \item $y_t = 13$ for $x_2 = 5$ (with $i=2$)
 \ei
+Should use $y_{it}$.
+
+\pause
+
+An expression such as
+\eb
+\nonumber y_{ij} = 2 x_i + 3
+\ee
+is valid.
+%-- it just means that the $ij$ value of $y$ is the same
+%for all values of the index $j$ (since nothing on the right-hand side depends
+%n $j$).
+
 \end{frame}
 
 %----------------------------------------------------------
@@ -583,58 +639,6 @@ Proofreading - mention KH paper
 
 
 \section*{Guidelines}
-
-
-\subsection*{Use italics, boldface and capitalisation appropriately}
-
-
-
-\subsection*{Use subscripts appropriately}
-
-An abbreviation can be used as a (non-italicised) subscript to indicate related
-definitions.
-For example, \citet{olajos18} used $P_\mathrm{fp}$ and $P_\mathrm{fn}$ to
-represent the respective probabilities of false positives and false negatives
-when modelling DNA records from sediments to study processes such as
-evolutionary divergence.
-Similarly, $B_\mathrm{MSY}$ is often
-used in fisheries to represent the biomass of a stock at the maximum sustainable
-yield (MSY). So MSY is being used not as an index (like in $B_t$ above), but as
-a non-italicised acronym to
-distinguish $B_\mathrm{MSY}$ from the related $B_t$.
-Just avoid trying to use $MSY$ alone as
-a variable (see below) -- if $Y_t$ represents the yield in
-year $t$, then
-$Y_\mathrm{MSY}$  would be notationally consistent with
-$B_\mathrm{MSY}$.
-
-Usually, a subscript that is used as an index should appear on both sides of
-an equation, such as in
-\eb
-y_t = 2 x_t + 3,
-\label{ytxt}
-\ee
-for the relationship between two variables $x_t$ and $y_t$ at each time $t$ --
-there is a value of $y_t$ corresponding to each setting of $t$.
-
-There should generally not be a mixture of subscripts, such as
-\eb
-y_t = 2 x_i + 3.
-\ee
-This equation implies that $y_t$ depends on the value of $x_i$, and therefore
-on $i$, and so $y_t$ should really be denoted $y_{it}$. Otherwise, for example,
-we may have $y_t = 9$
-for $x_1 = 3$ (with $i=1$), but $y_t = 13$ for $x_2 = 5$ (with $i=2$) -- but the
-notation $y_t$ does not distinguish between the different values for $i=1$ and
-$i=2$.
-
-An expression such as
-\eb
-y_{ij} = 2 x_i + 3
-\ee
-is valid -- it just means that the $ij$ value of $y$ is the same
-for all values of the index $j$ (since nothing on the right-hand side depends
-on $j$).
 
 One source of confusion is having $i$ and $j$ as indices, but then using these
 again in a summation to sum $N$ values:
