@@ -590,21 +590,88 @@ since $\red{k}, \red{l}$ and $\red{m}$ are just dummy indices.
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{4. Be careful with superscripts}
+
+Superscripts can distinguish related variables:
+\bi
+  \item $X$
+  \item $X'$
+\ei
+
+Though be careful -- single quotes sometimes used for derivatives of functions:
+\bi
+\item $f'(x)$
+\ei
+or transpose of vectors and matrices:
+\bi
+\item $\mathbf{X}'$
+\ei
+but transpose can also be
+\bi
+  \item $\mathbf{X}^{\mbox{t}}$
+  \item $\mathbf{X}^{\mbox{T}}$
+\ei
+
+Asterisks traditionally represent the steady state of a dynamic variable:
+\bi
+  \item $X^*$
+\ei
 
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{4. Be careful with superscripts}
 
+Please please please \red{do not use} a number or a letter (as an index) as a
+superscript:
+\bi
+  \item $B^t$ -- biomass in year $t$
+\ei
+but this looks like $B$ raised to the power $t$.
+
+Setting $t=2$ gives
+\bi
+  \item $B^2$
+\ei
+which is interpreted as $B \times B$, not the desired biomass in year~2.
+
+\pause
+
+Even worse example:
+\bi
+  \item $u_{at}^{sg}$ -- exploitation rate of fish of:
+  \bi
+    \item sex $s$
+    \item age $a$
+    \item caught by fishing gear $g$
+    \item in year $t$
+  \ei
+\ei
+
+Just use subscripts and go with
+\bi
+  \item $u_{atsg}$
+\ei
+like the earlier example of $B_{ijkmn}$.
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{4. Be careful with superscripts}
+Subscripts and superscripts should always come after the variable. Not:
+\bi
+  \item $_jv_t$
+\ei
+
+Otherwise, if $\theta$ multiplied by $_jv_t$ gives
+\bi
+  \item $\theta_jv_t$
+\ei
+but ambiguous: is first component $\theta_j$ or $\theta$?
+
 
 \end{frame}
 
@@ -662,31 +729,8 @@ Proofreading - mention KH paper
 
 
 
-\subsection*{Be careful with superscripts}
 
-Superscripts can be used to distinguish two related variables, e.g.~$X$ and $X'$.
-Although be aware that, as in (\ref{Yt1}), single quotes are sometimes used to designate the
-transpose of vectors or matrices (e.g.~$\mathbf{X}'$, though $\mathbf{X}^{\mbox{t}}$ or
-$\mathbf{X}^{\mbox{T}}$ are also common),
-or to represent the derivatives of functions [e.g.~$f'(x)$].
-Asterisks (e.g.~$X^*$) traditionally represent the steady state of a dynamic
-variable.
 
-A number or a letter (as an index) should not be used
-as a superscript. For example, we have seen $B^t$ used as
-the biomass in year $t$, but this looks like $B$ raised to the power $t$.
-When we explicitly set $t=2$ we get $B^2$, which is interpreted as $B$
-squared, not the desired biomass in year~2.
-Another example is using $u_{at}^{sg}$ to represent the exploitation rate
-of fish that are of sex $s$ and age $a$ being caught by fishing gear $g$ in
-year $t$. To avoid the superscripts it is fine to use $u_{atsg}$ like in the
-earlier example of multiple subscripts ($B_{ijkmn}$).
-
-Subscripts and superscripts should always come after the variable, to avoid
-confusing notation such as $_jv_t$. Otherwise, if $\theta$ multiplies $_jv_t$
-to give $\theta_jv_t$ then there is ambiguity as to whether
-the first component of this term should be interpreted as $\theta_j$ or just
-$\theta$.
 
 \subsection*{It can be helpful to distinguish variables from parameters}
 
