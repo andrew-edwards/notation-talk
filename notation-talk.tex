@@ -444,10 +444,38 @@ Obvious confusion.
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{3. Use subscripts appropriately}
+
+Should use:
+
 \bi
-  \item
+\item $B_{st}$ -- biomass in area $s$ in year $t$ (for various combinations of $s$ and $t$)
 \ei
+
+\pause
+
+Extending this, for data from fish trawl surveys:
+\bi
+  \item $B_{ijkmn}$ -- biomass caught per hour (g~h$^{-1}$) of:
+  \bi
+    \item taxonomic group $i$
+    \item length class $j$
+    \item haul $k$
+    \item by vessel $m$
+    \item in year $n$
+  \ei
+\ei
+
+Succinctly describes detailed structure of the data, and made subsequent
+calculations unambiguous.
+
+\pause
+\medskip
+
+\red{Commas:} can use $B_{st}$ or $B_{s,t}$, but always use them to avoid
+ambiguity: $B_{3,17}$ rather than $B_{317}$.
+
+
 \end{frame}
 
 %----------------------------------------------------------
@@ -562,24 +590,6 @@ Proofreading - mention KH paper
 
 
 \subsection*{Use subscripts appropriately}
-
-In practice there may be interest in modelling the biomass in
-area $s$ in year $t$ (for various combinations of $s$ and $t$),
-in which case two subscripts are needed: $B_{st}$.
-Extending this idea, \citet{ffrr12} analysed data from fish trawl surveys
-and defined
-$B_{ijkmn}$ as the biomass caught per hour (g~h$^{-1}$) of
-taxonomic group $i$,
-length class $j$
-and haul $k$ by
-vessel $m$ in
-year $n$. This notation succinctly describes the detailed structure of the data
-and makes Fung $et~al.$'s subsequent calculations clear and unambiguous.
-For brevity, there may be no need for a comma ($B_{s,t}$) until numbers are
-inserted and there
-could be ambiguity ($B_{3,17}$ rather than $B_{317}$),
-although this can be a matter of personal preference, and we ourselves have
-differing inclinations.
 
 An abbreviation can be used as a (non-italicised) subscript to indicate related
 definitions.
