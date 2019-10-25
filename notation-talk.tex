@@ -678,10 +678,51 @@ but ambiguous: is first component $\theta_j$ or $\theta$?
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{5. Helpful to distinguish variables from parameters}
+
+Example -- Ricker model:
+\eb
+\nonumber R = \alpha S \mbox{e}^{-\beta S}
+\label{ricker}
+\ee
+where
 \bi
-  \item
+  \item $R$ -- the recruitment of new fish (dependent variable on the left-hand
+    side)
+  \item $S$ -- the spawning stock biomass (independent variable on the right-hand
+    side)
+  \item $\alpha$ -- maximum number of recruits produced by each unit
+  of spawning stock biomass (parameter)
+  \item $\beta$ -- scales the intensity of density dependence (parameter).
 \ei
+
+% The model says how the variables $R$ and $S$ relate to each other.
+Using particular parameter values of $\alpha$ and $\beta$ distinguishes one
+realisation of the model from another.
+
+TODO Draw curves representing different values of $\alpha$.
+
+\end{frame}
+
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{5. Helpful to distinguish variables from parameters}
+
+Useful, if possible:
+\bi
+ \item variables -- upper case
+ \item parameter and constants (like gravitational constant $g$) -- lower case
+   and Greek letters
+\ei
+
+However, stick with established convention when this is not followed, or for
+simple equations such as
+\eb
+\nonumber y = 3 x + 7
+\ee
+with variables $x$ and $y$ (often the first choice to represent variables).
+
 \end{frame}
 
 %----------------------------------------------------------
@@ -734,30 +775,6 @@ Proofreading - mention KH paper
 
 \subsection*{It can be helpful to distinguish variables from parameters}
 
-It is essential to understand the differences between variables, parameters and
-constants in a model \citep{ps93}. To help emphasise the distinction between
-variables and parameters,
-upper-case letters are often used for variables, whereas lower-case (and Greek)
-letters designate parameters and constants. The dependent variable is usually on
-the
-left-hand side of an equation and depends on everything on the right-hand side.
-An example is the following formulation of the Ricker model \citep{bjorks12}:
-\eb
-R = \alpha S \mbox{e}^{-\beta S},
-\label{ricker}
-\ee
-where $R$ is the dependent variable (the recruitment of new fish) arising from
-the independent variable $S$ (the spawning stock biomass), with parameters
- $\alpha$ (the maximum number of recruits produced by each unit
-of spawning stock biomass) and $\beta$ (which scales the intensity of density
-dependence). If there is a choice (such as when
-developing a new model) then it is useful to use upper and lower case to
-distinguish variables from parameter and constants.
-Though it can be best
-to stick with established convention when this is not followed, for example in
-(\ref{Emc2}), or for simple equations involving variables denoted as $x$ and $y$
-with no letters used for parameters, as in (\ref{ytxt}) -- we used $x$ and $y$
-there since they are often the first choice to represent unknown variables.
 
 \subsection*{Avoid multi-letter variable names}
 
