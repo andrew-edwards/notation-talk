@@ -29,6 +29,7 @@ Friday 1st November, 2019}
 
 \usefonttheme{serif}
 \usepackage{mathptmx}    % Should have Times plus math fonts. AME used for Hake.
+\usepackage{cancel}      % for \cancel (forget what the standard one is)
 
 \begin{document}
 
@@ -728,28 +729,90 @@ with variables $x$ and $y$ (often the first choice to represent variables).
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{6. Avoid multi-letter variable names}
+
+Use only \red{one letter} (rather than two or more) to represent a quantity.
+
+Common abbreviation: SSB for spawning stock biomass.
+
+Fine as an \red{acronym in a sentence}, but problematic when $SSB$ used as a
+mathematical quantity in an equation:
+
 \bi
-  \item
+  \item $SSB_t$ -- spawning stock biomass in year $t$
+  \item $S$ -- selectivity (proportion of biomass caught by fishing)
+  \item $B_t$ -- total (spawning plus non-spawning) biomass in year $t$
 \ei
+
+% But then: \onslide<1>{S}\onslide<2>{\red{S}}  ~~~~\alt<1>{hello}{goodbye}
+\eb
+\nonumber \frac{S B_t}{SSB_t}
+% \frac{\alt<1>{S}{\cancel{\red{S}}} B_t}{SSB_t}
+% \alt<1>{\frac{S B_t}{SSB_t}}{\frac{\cancel{\red{S}} B_t}{SSB_t}
+% \alt<1>{\frac{a}{b}}{\frac{c}{d}}
+  % ~~~~~~~~~~{\textcolor<2->{red}{?}
+% ~~~~~~~~~~{\textcolor<2->{red}{?}
+% \nonumber \frac{\onslide<1>{S} \onslide<2>{\red{S}} B_t}{SSB_t}
+\ee
+is very ambiguous.
+
+Can the $S$'s be cancelled? What about the $B_t$'s? Does the denominator
+represent $S^2$ multiplied by $B_t$? A solution would be to use $B_t$ and $T_t$
+for, respectively, the spawning and total biomasses at time $t$.
+
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
 \frametitle{}
-\bi
-  \item
-\ei
+
+
+
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
 \frametitle{}
-\bi
-  \item
-\ei
+
+
+\end{frame}
+
+%----------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{}
+
+
+\end{frame}
+
+%----------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{}
+
+
+\end{frame}
+
+%----------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{}
+
+
+\end{frame}
+
+%----------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{}
+
+
 \end{frame}
 
 %----------------------------------------------------------
@@ -776,25 +839,7 @@ Proofreading - mention KH paper
 \subsection*{It can be helpful to distinguish variables from parameters}
 
 
-\subsection*{Avoid multi-letter variable names}
 
-Use only one letter (rather than two or more) to represent a quantity.
-For example, in fisheries science
-it is common to see the abbreviation SSB for spawning stock biomass.
-This is fine as an acronym in a sentence, but can become problematic when
-$SSB$ is used as a mathematical quantity in an equation. A subscript $t$
-may then be added to represent time: $SSB_t$. But if there is a
-quantity
-$S$ defined as, say, selectivity, and $B_t$ is defined as the total (spawning
-plus non-spawning) biomass in year $t$, then an equation such as
-\eb
-\frac{S B_t}{SSB_t}
-\label{SSB}
-\ee
-is very ambiguous. Can the $S$'s be cancelled? What about the $B_t$'s? Does
-the denominator represent $S^2$ multiplied by $B_t$? A solution would be to use
-$B_t$ and $T_t$ for, respectively, the spawning and
-total biomasses at time $t$.
 
 Occasionally it may be okay to use an acronym or word as a variable name.
 For example, \citet{zuur13} often use words
