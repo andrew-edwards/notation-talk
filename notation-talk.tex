@@ -744,28 +744,69 @@ mathematical quantity in an equation:
   \item $B_t$ -- total (spawning plus non-spawning) biomass in year $t$
 \ei
 
-% But then: \onslide<1>{S}\onslide<2>{\red{S}}  ~~~~\alt<1>{hello}{goodbye}
+But this breeds ambiguity:
+% \onslide<1>{S}\onslide<2>{\red{S}}  ~~~~\alt<1>{hello}{goodbye}  - latter worked
 \eb
-\nonumber \frac{S B_t}{SSB_t}
+\nonumber \frac{S B_t}{SSB_t} \onslide<2->{= \frac{\cancel{S}
+    B_t}{\cancel{S}SB_t}}
+  \onslide<3->{= \frac{S \cancel{B_t}}{SS\cancel{B_t}}}\onslide<2->{~~~~~~?}
+\ee
+\pause
+
 % \frac{\alt<1>{S}{\cancel{\red{S}}} B_t}{SSB_t}
 % \alt<1>{\frac{S B_t}{SSB_t}}{\frac{\cancel{\red{S}} B_t}{SSB_t}
 % \alt<1>{\frac{a}{b}}{\frac{c}{d}}
   % ~~~~~~~~~~{\textcolor<2->{red}{?}
 % ~~~~~~~~~~{\textcolor<2->{red}{?}
 % \nonumber \frac{\onslide<1>{S} \onslide<2>{\red{S}} B_t}{SSB_t}
-\ee
-is very ambiguous.
 
-Can the $S$'s be cancelled? What about the $B_t$'s? Does the denominator
-represent $S^2$ multiplied by $B_t$? A solution would be to use $B_t$ and $T_t$
-for, respectively, the spawning and total biomasses at time $t$.
+\onslide<4>Solution: pick, say, $B_t$ and $T_t$ for, respectively, the spawning and total biomasses at time $t$.
 
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{6. Avoid multi-letter variable names}
+
+Occasionally may be okay to use an acronym or word as a variable name:
+
+Words as variables often used in simple statistical models:
+\eb
+\nonumber \mbox{e}^{\beta_1 + \beta_2 \times \mbox{MeanDepth}_i}
+\ee
+which intuitively represents an exponential effect of a linear
+function of mean depth ($\beta_1$ and $\beta_2$ are parameters).
+
+\pause
+
+\bi
+  \item Such statistical models generally require no further subsequent mathematical
+  manipulation
+  \item May avoid the problems outlined in previous slide
+\ei
+
+\pause
+
+Words or acronyms can make models more understandable:
+\bi
+\item e.g. for stakeholders who are not quantitatively trained
+\item for a presentation or a poster, especially if not all details of
+  a model are going to be given.
+  \ei
+
+\pause
+
+Just ensure:
+\bi
+  \item no potential for confusion (can be hard to guarantee when
+    first defining notation)
+  \item equations don't become cumbersome and hard to understand
+\ei
+
+One solution: simultaneously give equations in word and notation form
+
+TODO: add example from a paper.
 
 
 
@@ -832,35 +873,6 @@ Proofreading - mention KH paper
 \section*{Guidelines}
 
 
-
-
-
-
-\subsection*{It can be helpful to distinguish variables from parameters}
-
-
-
-
-Occasionally it may be okay to use an acronym or word as a variable name.
-For example, \citet{zuur13} often use words
-as variables in their statistical models, resulting in terms such as
-$\mbox{e}^{\beta_1 + \beta_2 \times MeanDepth_i}$
-which intuitively represents an exponential effect of a linear
-function of mean depth ($\beta_1$ and $\beta_2$ are parameters).
-In such statistical models there is generally no further subsequent mathematical
-manipulation which may avoid the problems outlined by (\ref{SSB}).
-The use of words or acronyms can make models more understandable to, say,
-stakeholders who are not quantitatively trained but
-have insights into the system being modelled -- this also may be particularly
-appropriate for a presentation or a poster, especially if not all details of
-a model are going to be given.
-And using words
-or acronyms does not require people to remember notation.
-However, it should be ensured that
-there is no potential for confusion (which can be hard to guarantee when
-first defining notation) or for equations to become cumbersome
-and hard to understand. One approach can be to simultaneously
-give equations in word and notation form (e.g.~\citealt{eb96}).
 
 \subsection*{Fully define probability distributions}
 
