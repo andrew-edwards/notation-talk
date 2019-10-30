@@ -818,12 +818,12 @@ TODO: add example from a paper.
 \frametitle{7. Fully define probability distributions}
 
 \bi
-\item Discrete random variable -- takes discrete values (e.g.~1, 2, 3, ...)
-\item Continuous random variable -- can take any value within a specified range
+\item \red{Discrete} random variable -- takes discrete values (e.g.~1, 2, 3, ...)
+\item \blue{Continuous} random variable -- can take any value within a specified range
   (e.g.~between 0 and 10).
 \ei
 
-$f(x)$ -- \emph{probability mass function} of a discrete variable $X$
+$f(x)$ -- \emph{probability mass function} of a \red{discrete} variable $X$
 
 Is the probability that $X$ takes each possible value of $x$, i.e.~$f(x) = \mbox{P}(X = x)$, where
 
@@ -837,9 +837,35 @@ where $x$ are the possible values and there is just one parameter $\lambda>0$.
 
 Corresponding \emph{cumulative} distribution function is given by the upper case
 \eb
-F(x) = \mbox{P}(X \leq x) = \sum_{i=0}^{x} f(i)
+\nonumber F(x) = \mbox{P}(X \leq x) = \sum_{i=0}^{x} f(i)
 \ee
 
+\end{frame}
+
+%----------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{7. Fully define probability distributions}
+
+\blue{Continuous} variable $X$:
+\bi
+\item $f(x)$ -- \blue{continuous} probability density function
+\item $F(x)$ -- cumulative probability distribution:
+\ei
+
+\eb
+\nonumber F(x) = \mbox{P}(X \leq x) = \int f(x) \mbox{d}x
+\ee
+
+For example, lognormal distribution:
+\eb
+\nonumber f(x) = \frac{1}{\sqrt{2 \pi} \sigma x} \mbox{e}^{-(\log x - \mu)^2 / 2
+  \sigma^2}, ~~ x > 0
+\ee
+for parameters $\mu$ and $\sigma$, and $\log$ is \red{natural logarithm} -- worth specifying and using $\log_{10}$ for
+base-10 logarithm (also $\ln$ is also used for the natural logarithm).
+
 
 \end{frame}
 
@@ -847,8 +873,25 @@ F(x) = \mbox{P}(X \leq x) = \sum_{i=0}^{x} f(i)
 
 
 \begin{frame}
-\frametitle{}
+\frametitle{7. Fully define probability distributions}
 
+Note in both examples the \red{domain} is specified:
+\eb
+\nonumber f(x) & = & \frac{\lambda^x \mbox{e}^{-\lambda}}{x!}, ~~ \red{x = 0, 1, 2,
+  ...}\\
+\nonumber f(x) & = & \frac{1}{\sqrt{2 \pi} \sigma x} \mbox{e}^{-(\log x - \mu)^2 / 2
+  \sigma^2}, ~~\red{x > 0}
+\ee
+
+This also helps confirm the distribution is appropriate for the
+question at hand.
+
+\medskip
+
+\pause
+
+Normal distribution -- generally no need to explicity specify that
+$-\infty < x < \infty$.
 
 \end{frame}
 
@@ -856,8 +899,26 @@ F(x) = \mbox{P}(X \leq x) = \sum_{i=0}^{x} f(i)
 
 
 \begin{frame}
-\frametitle{}
+\frametitle{7. Fully define probability distributions}
 
+For a second random variable, $Y$, possible options are:
+\bi
+\item $g(y)$
+\item $f_Y(y)$,  and use $f_X(x)$ for $X$
+\item $f(y)$ -- does \red{not} work as \red{not distinguishable} from $f(x)$
+\ei
+
+\pause
+
+Some distributions have a conventional shorthand, e.g.:
+\bi
+\item $X \sim \mbox{N}(\mu, \sigma^2)$ -- variable $X$ that is normally distributed with
+  mean $\mu$ and standard deviation $\sigma$
+\item $X \sim \mbox{N}(0,2)$ -- here specify whether the 2 is the standard
+  deviation or the variance to avoid ambiguity
+\item $X \sim \mbox{Gamma}(a, b)$ -- Gamma distribution, but define parameters
+  as can be parameterised using shape and either rate, scale or mean
+\ei
 
 \end{frame}
 
@@ -896,54 +957,7 @@ Proofreading - mention KH paper
 \section*{Guidelines}
 
 
-For a continuous variable $X$, we have the continuous probability density
-function $f(x)$ and the cumulative probability distribution
-\eb
-F(x) = \mbox{P}(X \leq x) = \int f(x) \mbox{d}x.
-\ee
-For example, the lognormal distribution is often used in population dynamics
-and has
-\eb
-f(x) = \frac{1}{\sqrt{2 \pi} \sigma x} \mbox{e}^{-(\log x - \mu)^2 / 2
-  \sigma^2}, ~~ x > 0
-\label{lognormal}
-\ee
-for parameters $\mu$ and $\sigma$ (e.g.~\citealt{bolk08}); $\log$ here is
-the natural logarithm (this is worth specifying and using $\log_{10}$ for
-base-10 logarithm, though $\ln$ is also used for the natural logarithm).
-Note the definition
-of the domain $(x > 0)$.
-Other distributions may take only positive integer values
-(e.g.~Poisson distribution),
-any value between two bounds (e.g.~uniform distribution), or any value
-between two positive values (e.g.~bounded power-law distribution) --
-see \citet{bolk08} and \citet{erpbb17}. Defining the domain also helps the
-author confirm that the distribution is appropriate for the
-question at hand. For the normal distribution, since $X$
-can take any positive or negative value there is generally no need to
-specify that the domain is given by $-\infty < x < \infty$.
-Defining the domain of indices (and parameters) is similarly necessary. For
-example, in state space models of animal movements, observations may start
-at time $t=1$, but an unobserved initial location at $t=0$ needs to be modelled
-and explicitly explained (e.g.~\citealt{augerm16}).
 
-If a second random
-variable, $Y$, is being considered, then its density function
-is often expressed as $f_Y(y)$, and that for $X$ would become $f_X(x)$.
-Alternatively, $g(y)$ could be used. Note that $f(y)$ does not work as it
-is not distinguishable from $f(x)$; the $f$ in (\ref{lognormal})
-represents the lognormal distribution, not the $x$.
-The analogous cumulative distribution function for $Y$ would
-be $F_Y(y)$ or $G(y)$.
-
-Some distributions have a conventional shorthand. For example, $X \sim
-\mbox{N}(\mu, \sigma^2)$ for a variable $X$ that is normally distributed with
-mean $\mu$ and standard deviation $\sigma$ -- though when using N$(0,2)$
-specify whether the 2 is the standard deviation or the variance.
-While the shorthand for the Gamma
-distribution is generally $X \sim \mbox{Gamma}(a, b)$, it is important to define
-the parameters as the distribution can be parameterised using shape and either
-rate, scale or mean.
 
 \subsection*{Give equations of a model rather than just computer code}
 
