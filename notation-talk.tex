@@ -815,7 +815,30 @@ TODO: add example from a paper.
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{7. Fully define probability distributions}
+
+\bi
+\item Discrete random variable -- takes discrete values (e.g.~1, 2, 3, ...)
+\item Continuous random variable -- can take any value within a specified range
+  (e.g.~between 0 and 10).
+\ei
+
+$f(x)$ -- \emph{probability mass function} of a discrete variable $X$
+
+Is the probability that $X$ takes each possible value of $x$, i.e.~$f(x) = \mbox{P}(X = x)$, where
+
+P$(\cdot)$ -- probability of occurrence of the event in parentheses.
+
+For example, Poisson distribution for count data:
+\eb
+\nonumber f(x) = \frac{\lambda^x \mbox{e}^{-\lambda}}{x!}, ~~ x = 0, 1, 2, ...
+\ee
+where $x$ are the possible values and there is just one parameter $\lambda>0$.
+
+Corresponding \emph{cumulative} distribution function is given by the upper case
+\eb
+F(x) = \mbox{P}(X \leq x) = \sum_{i=0}^{x} f(i)
+\ee
 
 
 \end{frame}
@@ -872,34 +895,6 @@ Proofreading - mention KH paper
 
 \section*{Guidelines}
 
-
-
-\subsection*{Fully define probability distributions}
-
-A discrete random variable takes discrete values (e.g.~1, 2, 3, ...), whereas
-a continuous random variable can take any value within a specified range
-(e.g.~between 0 and 10). The probability mass function of a discrete variable
-$X$
-is written as $f(x)$, and is just the probability that $X$ takes each possible
-value of $x$, i.e.~$f(x) = \mbox{P}(X = x)$, where
-P$(\cdot)$~stands for the probability of occurrence of the event in parentheses.
-For example, the Poisson distribution can be used for count
-data and is represented by
-\eb
-f(x) = \frac{\lambda^x \mbox{e}^{-\lambda}}{x!},
-  ~~ x = 0, 1, 2, ...
-\label{poisson}
-\ee
-where $x$ are the possible values and there is just one parameter $\lambda>0$
-(e.g.~\citealt{bolk08}). The corresponding \emph{cumulative} distribution
-function is given by the upper case
-$F(x) = \mbox{P}(X \leq x) = \sum_{i=0}^{x} f(i)$.
-Note that sometimes $F(x)$ is simply called the probability distribution
-function \citep{gs90}, though this term can be ambiguous (e.g.~\citealt{cw11}
-used it for the probability density function) and so it may be best
-avoided.
-Explicitly stating that
-$F(x) = \mbox{P}(X \leq x)$ can avoid any confusion.
 
 For a continuous variable $X$, we have the continuous probability density
 function $f(x)$ and the cumulative probability distribution
