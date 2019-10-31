@@ -1133,14 +1133,54 @@ Established conventions:
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{10. Use parentheses and brackets only as necessary}
+
+Parentheses $()$
+\bi
+\item around the arguments of a function, e.g.~$f(x)$
+\item denote which calculations in an equation need to be done first
+\ei
+
+To avoid too many  many slightly-different sized parentheses also use:
+\bi
+\item square brackets $[~]$
+\item braces $\{\}$
+\ei
+
+\pause
+
+But don't overuse them:
+\eb
+\nonumber f(x) = \frac{\left(\lambda^x\right) \left(\mbox{e}^{-\lambda}\right)}{x!},
+  ~~ x = 0, 1, 2, ...
+\ee
+makes the equation appear more complicated than it is.
+
+% We have seen happen
+This often happens in practice -- but extra clutter can impede comprehension.
 
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{10. Use parentheses and brackets only as necessary}
+
+Almost always no need to use a symbol such as $\times$ or $\cdot$ for
+multiplication, unless
+\bi
+\item using words as variable names
+\item breaking up long equations for readability
+\ei
+
+\pause
+
+Parentheses also used:
+\bi
+\item $x \in (0, 1)$ means $0 < x < 1$
+\item $x \in [0, 1]$ means $0 \leq x \leq 1$
+\item $x \in [0, 1)$ means $0 \leq x < 1$
+\ei
 
 \end{frame}
 
@@ -1174,39 +1214,6 @@ Proofreading - mention KH paper
 
 % notation-rev.tex: take some bits to put into talk, delete un-needed:
 
-
-While the two equations convey the same meaning, the choice of notation
-makes (\ref{screwy}) less understandable than (\ref{sensible}).
-Reading (\ref{screwy}) is quite jarring and requires extra effort for
-the reader (acknowledging that we purposefully chose the notation
-to make such a point).
-
-
-\subsection*{Use parentheses and brackets only as necessary}
-
-Parentheses, $()$,
-are used
-around the arguments of a function, e.g.~$f(x)$ in~(\ref{poisson}), and
-to denote which calculations in an equation need to be done first, as
-in equation~(\ref{sensible}). Square brackets, $[~]$, and braces, $\{\}$,
-are also used if necessary to avoid having too many slightly-different sized
-parentheses. But parentheses should not be included if not necessary.
-For example, there is no ambiguity in (\ref{poisson}), but writing it as
-\eb
-f(x) = \frac{\left(\lambda^x\right) \left(\mbox{e}^{-\lambda}\right)}{x!},
-  ~~ x = 0, 1, 2, ...
-\label{poisson2}
-\ee
-introduces extra unnecessary notation and makes the equation appear more
-complicated than it is. We have seen this happen in practice, and the extra
-clutter in the equation can impede comprehension. There is almost always
-no need to use a symbol such as $\times$ or $\cdot$
-to convey multiplication unless using
-words as variable names (or to break up long equations for readability).
-
-Parentheses are also used in the form $x \in (0, 1)$ to represent $0 < x < 1$,
-and similarly $x \in [0, 1]$ means $0 \leq x \leq 1$; a combination such as
-$x \in [0, 1)$ consequently means $0 \leq x < 1$.
 
 \subsection*{Equations should be part of sentences}
 
