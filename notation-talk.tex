@@ -908,15 +908,19 @@ One solution is to simultaneously give equations in word and notation form:
 
 \bi
 \item \red{Discrete} random variable -- takes discrete values (e.g.~1, 2, 3, ...)
-\item \blue{Continuous} random variable -- can take any value within a specified range
-  (e.g.~between 0 and 10).
 \ei
 
-$f(x)$ -- \emph{probability mass function} of a \red{discrete} variable $X$
+$f(x)$ -- \emph{probability mass function} of a \red{discrete} variable $X$:
+\eb
+\nonumber f(x) = \mbox{P}(X = x)
+\ee
+where % Is the probability that $X$ takes each possible value of $x$, i.e.~
+\bi
+\item P$(\cdot)$ -- probability of occurrence of the event in parentheses ($X$
+  takes the value $x$)
+\ei
 
-Is the probability that $X$ takes each possible value of $x$, i.e.~$f(x) = \mbox{P}(X = x)$, where
-
-P$(\cdot)$ -- probability of occurrence of the event in parentheses.
+\medskip
 
 For example, Poisson distribution for count data:
 \eb
@@ -924,36 +928,29 @@ For example, Poisson distribution for count data:
 \ee
 where $x$ are the possible values and there is just one parameter $\lambda>0$.
 
-Corresponding \emph{cumulative} distribution function is given by the upper case
-\eb
-\nonumber F(x) = \mbox{P}(X \leq x) = \sum_{i=0}^{x} f(i)
-\ee
-
 \end{frame}
 
 %----------------------------------------------------------
 
-
 \begin{frame}
 \frametitle{7. Fully define probability distributions}
 
-\blue{Continuous} variable $X$:
 \bi
-\item $f(x)$ -- \blue{continuous} probability density function
-\item $F(x)$ -- cumulative probability distribution:
+\item \blue{Continuous} random variable -- can take any value within a specified range
+  (e.g.~between 0 and 10).
 \ei
 
-\eb
-\nonumber F(x) = \mbox{P}(X \leq x) = \int_{- \infty}^x f(u) \mbox{d}u
-\ee
-
-For example, lognormal distribution:
+$f(x)$ -- \blue{continuous} probability density function, for example:
 \eb
 \nonumber f(x) = \frac{1}{\sqrt{2 \pi} \sigma x} \mbox{e}^{-(\log x - \mu)^2 / 2
   \sigma^2}, ~~ x > 0
 \ee
-for parameters $\mu$ and $\sigma$, and $\log$ is \red{natural logarithm} -- worth specifying and using $\log_{10}$ for
-base-10 logarithm (also $\ln$ is also used for the natural logarithm).
+for parameters $\mu$ and $\sigma$, and $\log$ is \red{natural logarithm}.
+
+\medskip
+
+Worth defining `$\log$' and using $\log_{10}$ for
+base-10 logarithm (realising $\ln$ is also used for the natural logarithm).
 
 
 \end{frame}
@@ -986,6 +983,25 @@ $-\infty < x < \infty$.
 
 %----------------------------------------------------------
 
+\begin{frame}
+\frametitle{7. Fully define probability distributions}
+
+For \red{discrete} and \blue{continuous} distributions, can define
+\bi
+\item $F(x)$ -- cumulative probability distribution:
+\ei
+
+\eb
+\nonumber \mbox{\red{discrete}} ~~~~~ F(x) & = & \mbox{P}(X \leq x) =
+\sum_{i=0}^{x} f(i)\\
+\nonumber  & & \\
+\nonumber \mbox{\blue{continuous}} ~~~~~F(x) & = & \mbox{P}(X \leq x) = \int_{- \infty}^x f(u) \mbox{d}u
+\ee
+
+\end{frame}
+
+%----------------------------------------------------------
+
 
 \begin{frame}
 \frametitle{7. Fully define probability distributions}
@@ -1001,7 +1017,7 @@ For a second random variable, $Y$, possible options are:
 
 Some distributions have a conventional shorthand, e.g.:
 \bi
-\item $X \sim \mbox{N}(\mu, \sigma^2)$ -- variable $X$ that is normally distributed with
+\item $X \sim \mbox{N}(\mu, \sigma^2)$ -- variable $X$ is normally distributed with
   mean $\mu$ and standard deviation $\sigma$
 \item $X \sim \mbox{N}(0,2)$ -- here specify whether the 2 is the standard
   deviation or the variance to avoid ambiguity
