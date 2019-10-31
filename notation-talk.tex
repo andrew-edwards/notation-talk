@@ -1253,16 +1253,37 @@ pause and rewriting code in a more user-friendly way tends to pay off in future.
 
 Related point -- PROOFREAD.
 
+\medskip
+
 Different publishers have different minor typsetting rules (that may or may not
 impact comprehension).
 
-\pause
+\medskip
 
 Letters should have unique definition in single piece of work.
 
 \end{frame}
 
 %----------------------------------------------------------
+
+\begin{frame}
+\frametitle{Example of confusing notation}
+
+Highlights several problems:
+\eb
+\nonumber \sigma_a^{\textcolor<2,4>{red}{s}^2} = \left( \frac{{\textcolor<3>{blue}{sd}}^{\textcolor<2,4>{red}{S}}_a}{L^{\textcolor<2,4>{red}{S}}_a} \right)^2
+\ee
+where:
+\bi
+\item ${\textcolor<3>{blue}{sd}}^{\textcolor<2,4>{red}{S}}_a$  -- standard deviation of the length of a fish of age $a$ and sex
+  $s$
+\item $\sigma_a^{\textcolor<2,4>{red}{s}}$ -- standard deviation of the distribution of log(length) at
+  age $a$ for sex $s$
+\item $L^{\textcolor<2,4>{red}{S}}_a$ -- length at age $a$ for sex $s$
+\item $\textcolor<4>{red}{s}$ -- sex, $s=1$ for females and $s=2$ for males
+\ei
+
+\end{frame}
 
 \end{document}
 
@@ -1274,28 +1295,6 @@ Proofreading - mention KH paper
 
 
 
-\subsection*{An example of confusing notation}
-
-One example we have seen that highlights several of the problems outlined
-above concerns fish growth and is
-\eb
-\sigma_a^{s^2} = \left( \frac{sd^S_a}{L^S_a} \right)^2,
-\label{sigma2}
-\ee
-% Awatea manual p5. Can't find it, but have found older Coleraine v1, p7.
-which relates the standard deviation of the length of a fish of age $a$ and sex
-$s$ (where $s=1$ for females and $s=2$ for males),
-$sd^S_a$, to the standard deviation of the distribution of log(length) at
-age $a$ for sex $s$, $\sigma_a^{s}$, where $L^S_a$ is the length at age $a$
-for sex $s$.
-The use of a superscript $s$ to index sex requires another higher-level
-superscript in the term $\sigma_a^{s^2}$ to denote that the standard deviation
-term $\sigma_a^s$ is being squared. The $sd$ on the right-hand side stands for
-standard deviation (one letter would suffice, especially with $s$ being used
-elsewhere), and the superscript $S$ is capitalised on the right-hand side but not
-on the left. Equation (\ref{sigma2}) is simply scaling a standard deviation by
-a length value, but looks much more complicated than that due to the choice
-of notation.
 
 \section*{Discussion}
 
@@ -1350,3 +1349,11 @@ This work uses no data.
 \end{frame}
 
 %----------------------------------------------------------
+The use of a superscript $s$ to index sex requires another higher-level
+superscript in the term $\sigma_a^{s^2}$ to denote that the standard deviation
+term $\sigma_a^s$ is being squared. The $sd$ on the right-hand side stands for
+standard deviation (one letter would suffice, especially with $s$ being used
+elsewhere), and the superscript $S$ is capitalised on the right-hand side but not
+on the left. Equation (\ref{sigma2}) is simply scaling a standard deviation by
+a length value, but looks much more complicated than that due to the choice
+of notation.
