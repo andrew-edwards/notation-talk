@@ -1000,14 +1000,128 @@ the code, since:
 \item useful to supply code as Supporting Information or as a package
 \ei
 
+\end{frame}
 
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{9. Abide by conventions (but still define everything)}
+
+\centering Common mathematical usage of particular letters and symbols
+\begin{table}
+  \centering\rowcolors{2}{gray!6}{white}
+  \begin{tabular}{ll}
+\hline
+Letter/symbol & Common usage\\
+\hline
+$e$ & usually avoided to prevent confusion with non-italicised e ($=$2.718...)\\
+  % base of natural logarithm,
+$f, g$ & function, e.g.~$f(x) = x^3 + 7$\\
+$i, j, k$ & index, e.g.~the $i$th element of vector {\bf x} is $x_i$\\
+$n, N$ & sample size\\
+$o, O$ & usually avoided to prevent confusion with number 0\\
+$t$ & time\\
+$u, v, w$ & speeds\\
+$x, y, z$ & variables, or co-ordinates in space\\
+\mbox{P}$(\cdot)$ & probability of occurrence of the event in parentheses\\
+$X, Y, Z$ & variables\\
+\hline
+\end{tabular}
+\rowcolors{2}{white}{white}
+\end{table}
 
 \end{frame}
 
 %----------------------------------------------------------
 
+\begin{frame}
+\frametitle{9. Abide by conventions (but still define everything)}
 
+\centering Common mathematical usage of particular letters and symbols
+\begin{table}
+  \centering\rowcolors{2}{gray!6}{white}
+  \begin{tabular}{ll}
+\hline
+Letter/symbol & Common usage\\
+\hline
+$\alpha, \beta, \gamma, \theta$ & parameters\\
+$\delta, \Delta$ & difference or change in a variable, $\Delta X$, or a
+  parameter\\
+$\epsilon$ & a small value, or random noise term\\
+$\mu$ & mean\\
+$\pi$ & the value 3.141...\\
+$\prod$ & product of the proceeding values\\
+$\sigma$ & standard deviation\\
+$\sum$ & summation of the proceeding values\\
+$X^*$ & steady-state value of $X$\\
+$\dot{X}$ & derivative of $X$\\  % also $x'$ but that's really just physicists
+$f'(x)$ & derivative of $f(x)$ with respect to $x$\\
+$\partial f/\partial x$ & partial derivative of $f(x,y)$ with respect to $x$\\
+$\hat{\theta}$ & an estimate of $\theta$\\
+\hline
+\end{tabular}
+\rowcolors{2}{white}{white}
+\end{table}
 
+\end{frame}
+
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+
+%----------------------------------------------------------
+
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+
+%----------------------------------------------------------
 
 \end{document}
 
@@ -1026,71 +1140,8 @@ Proofreading - mention KH paper
 
 
 
-Similarly, it may not be obvious how to translate {\tt for} loops into
-equations. But it can be cumbersome to describe in words what the {\tt for} loop is
-doing, whereas the equation can be described more succinctly.
-For example,
-consider estimating the parameter of the simple one-dimensional
-random walk model
-\eb
-X_t = X_{t-1} + \epsilon_t, ~~~~~~~t=2, 3, 4, ..., T\,\
-\ee
-where $X_t$ is location at time $t$ (with $X_1 = 0$)
-and $\epsilon_t$ is a random independent
-movement component distributed normally with mean 0 and unknown standard
-deviation $\sigma$.
-Here, $\sigma$ is the only parameter to estimate and we could code the
-appropriate log-likelihood in R as:
-\eb
-\nonumber
-&&\mathtt{loglik <\!\!\!- ~ 0}\\
-\nonumber
-&&\mathtt{for(t ~~ in ~~ 2:T)\{}\\
-\nonumber
-&&~~~~~~~~~ \mathtt{p <\!\!\!- ~dnorm(x[t],x[t-1],sigma)}\\
-\nonumber
-&&~~~~~~~~~ \mathtt{loglik <\!\!\!- ~loglik + log(p)}\\
-\nonumber
-&&\}
-\label{forloop}
-\ee
-where \texttt{x} is a vector of known data (with \texttt{x[1]=0}),
-and for each \texttt{t} in the loop we first calculate the probability of
-observing the value \texttt{x[t]}
-based on a normal distribution with mean \texttt{x[t-1]} and standard deviation
-\texttt{sigma}, and then sum the log of these probabilities for each \texttt{t}
-from 2 to \texttt{T} to get the
-overall log-likelihood. This can be more succinctly described in equation form as
-\eb
-\log \left[\mathcal{L}\left( \sigma | \mathbf{x} \right) \right] =
-  \log \left( \sum_{i=2}^T \frac{1}{\sqrt{2 \pi} \sigma}
-  \mbox{e}^{-(x_t - x_{t-1})^2 / 2 \sigma^2 }\right),
-\label{ll}
-\ee
-where $\mathcal{L}\left( \sigma | \mathbf{x} \right)$,
-or just $\mbox{L}\left( \sigma | \mathbf{x} \right)$,
-is the likelihood of the
-standard deviation $\sigma$ given the data vector $\mathbf{x}$ with $T$ elements
-$x_t$ (with $x_1=0$), and the summation term comes from the assumption of normally distributed
-movement. Often $\ell\left( \sigma | \mathbf{x} \right)$ represents the
-log-likelihood; as does $\mbox{l}\left( \sigma | \mathbf{x} \right)$, although l can
-be hard to distinguish from~$1$.
 
-A command such as \texttt{cumsum()} may just be part of the book-keeping
-involved when writing code to implement a model and may not require an
-equation. However, a log-likelihood function is usually an essential part of the
-model and should be written explicitly.
-
-So although a piece of R code may be more intuitive than the corresponding
-equations, a drawback of just supplying code is that it relies on the reader to
-have knowledge of R. Programming languages evolve and fall out of favour, and R
-may not be around in twenty years, whereas properly documented equations will
-stand the test of time.  In addition, while code can be added in supplementary
-materials, it is rarely included in the main text and properly verified by
-reviewers. The equations provide a clear description of what has been done and
-can often be incorporated in the main text.
-
-\subsection*{Abide by conventions (but still define everything)}
+\subsection*{}
 
 Table~\ref{tab:letters} gives some common mathematical uses of certain letters
 that it is worth being aware of when creating new notation.
@@ -1261,42 +1312,6 @@ This work uses no data.
 % \clearpage
 
 % \renewcommand{\arraystretch}{1.9}  % forces table double spaced
-\begin{table}
-  \caption{Common mathematical usage of particular letters and
-      symbols. \label{tab:letters}}
-  \centering
-  \begin{tabular}{ll}
-\hline
-Letter/symbol & Common usage\\
-\hline
-$e$ & usually avoided to prevent confusion with non-italicised e ($=$2.718...)\\
-  % base of natural logarithm,
-$f, g$ & function, e.g.~$f(x) = x^3 + 7$\\
-$i, j, k$ & index, e.g.~the $i$th element of vector {\bf x} is $x_i$\\
-$n, N$ & sample size\\
-$o, O$ & usually avoided to prevent confusion with number 0\\
-$t$ & time\\
-$u, v, w$ & speeds\\
-$x, y, z$ & variables, or co-ordinates in space\\
-\mbox{P}$(\cdot)$ & probability of occurrence of the event in parentheses\\
-$X, Y, Z$ & variables\\
-$\alpha, \beta, \gamma, \theta$ & parameters\\
-$\delta, \Delta$ & difference or change in a variable, $\Delta X$, or a
-  parameter\\
-$\epsilon$ & a small value, or random noise term\\
-$\mu$ & mean\\
-$\pi$ & the value 3.141...\\
-$\prod$ & product of the proceeding values\\
-$\sigma$ & standard deviation\\
-$\sum$ & summation of the proceeding values\\
-$X^*$ & steady-state value of $X$\\
-$\dot{X}$ & derivative of $X$\\  % also $x'$ but that's really just physicists
-$f'(x)$ & derivative of $f(x)$ with respect to $x$\\
-$\partial f/\partial x$ & partial derivative of $f(x,y)$ with respect to $x$\\
-$\hat{\theta}$ & an estimate of $\theta$\\
-\hline
-\end{tabular}
-\end{table}
 
 
 \begin{frame}
