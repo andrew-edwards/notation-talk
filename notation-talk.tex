@@ -926,7 +926,57 @@ Some distributions have a conventional shorthand, e.g.:
 
 
 \begin{frame}
-\frametitle{}
+\frametitle{8. Give equations of a model rather than just computer code}
+
+One reason that acronyms or words get used to identify variables may be
+that this is how they are written in computer code.
+
+Using words in code can be helpful because it can make the code easier to read and avoid typographical
+errors.
+
+But words in equations are not recommended.
+
+Solutions:
+\bi
+\item write equations first and then have a comment in the corresponding code that links the words used in the code to the
+  corresponding mathematical notation.
+\item modern simpler alternative is the R~package {\tt knitr}
+\item {\tt knitr} interweaves text and computer code in a
+  single file, easily enabling the same succinct notation to be used throughout.
+\item Rmarkdown now allows easy interweaving math, code, write up, references,
+  figures etc.
+\ei
+
+\end{frame}
+
+%----------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{8. Give equations of a model rather than just computer code}
+
+TODO add some knitr code
+
+\bi
+\item Writing equations may seem a necessary prerequisite to writing code
+\item Some people are proficient programmers but are sometimes unable to translate the
+  code into mathematical notation
+\ei
+
+For example, for a numeric vector {\tt x} in R, the command
+\eb
+\nonumber {\tt y <\!\!\!- ~ cumsum(x)}
+\ee
+is defined as creating a vector {\tt y} where each element is the cumulative sum
+of the elements of {\tt x}.
+
+Equivalent math: for a vector ${\bf x}$ of length $n$,
+\eb
+\nonumber y_i = \sum_{j=1}^i x_j, ~~~ i=1, 2, 3, ..., n.
+\ee
+
+\pause
+However, the verbal description is ambiguous, unlike the equation.
 
 
 \end{frame}
@@ -935,7 +985,21 @@ Some distributions have a conventional shorthand, e.g.:
 
 
 \begin{frame}
-\frametitle{}
+\frametitle{8. Give equations of a model rather than just computer code}
+
+The {\tt cumsum(x)} example is usually just for book-keeping.
+
+\medskip
+
+But for more complex code (e.g. log-likelihood functions), give the equation not
+the code, since:
+\bi
+\item code relies on reader having knowledge of that particular language
+\item languages evolve and fall out of favour
+\item properly documented equations will stand the test of time
+\item useful to supply code as Supporting Information or as a package
+\ei
+
 
 
 \end{frame}
@@ -959,36 +1023,8 @@ Proofreading - mention KH paper
 
 
 
-\subsection*{Give equations of a model rather than just computer code}
 
-One reason that acronyms or words get used to identify variables may be
-that this is how they are written in computer code. Using words in code
-can be helpful because it can make the code easier to read and avoid typographical
-errors. One solution is to write the equations first and then have a
-comment in the corresponding code that links the words used in the code to the
-corresponding mathematical
-notation. A modern simpler alternative is the R~package {\tt knitr} \citep{xie18},
-that interweaves the text and computer code in a
-single file, easily enabling the same succinct notation to be used throughout.
-Although writing the equations first may seem a necessary
-prerequisite to writing code, some people, especially with the popularity of R
-\citep{R18}, are proficient programmers but are sometimes unable to translate the
-code into mathematical notation. For example,
-for a numeric vector {\tt x} in R, the command
-\eb
-\nonumber
-{\tt y <\!\!\!- ~ cumsum(x)}
-\label{cumsum}
-\ee
-is defined as creating a vector {\tt y} where each element is the cumulative sum
-of the elements of {\tt x}. That can seem more intuitive than having to
-express the same
-idea using an equation: for a vector ${\bf x}$ of length $n$,
-\eb
-y_i = \sum_{j=1}^i x_j, ~~~ i=1, 2, 3, ..., n.
-\label{yi}
-\ee
-However, the verbal description is ambiguous, unlike equation (\ref{yi}).
+
 
 Similarly, it may not be obvious how to translate {\tt for} loops into
 equations. But it can be cumbersome to describe in words what the {\tt for} loop is
