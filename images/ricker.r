@@ -1,3 +1,4 @@
+# Plot Ricker curve with example parameter values
 ricker <- function(Svec, alpha, beta)
 {
   alpha * Svec * (exp(- beta * Svec))
