@@ -1068,21 +1068,65 @@ $\hat{\theta}$ & an estimate of $\theta$\\
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{9. Abide by conventions (but still define everything)}
+
+Compare:
+
+1. The population size is given by
+\eb
+ t_\epsilon = g t_{\epsilon-1} (1 - t_{\epsilon-1}) + f_\epsilon
+\label{screwy}
+\ee
+where
+\bi
+\item $t_\epsilon$ -- population in year $\epsilon$ ($\epsilon = 1, 2, 3, ...,
+  \Gamma$)
+\item $g$ -- intrinsic growth rate at low population size
+\item  $f_\epsilon$ -- normally distributed random noise with mean $\sigma$ and variance $\mu^2$
+\ei
 
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{9. Abide by conventions (but still define everything)}
+
+2. The population size is given by
+\eb
+X_t = r X_{t-1} (1 - X_{t-1}) + \epsilon_t
+\label{sensible}
+\ee
+where
+\bi
+\item $X_t$ -- population in year $t$ ($t = 1, 2, 3, ..., T$)
+\item $r$ -- intrinsic growth rate at low population size
+\item $\epsilon_t$ -- normally distributed random noise with mean $\mu$ and variance $\sigma^2$.
+  \ei
 
 \end{frame}
 
 %----------------------------------------------------------
 
 \begin{frame}
-\frametitle{}
+\frametitle{9. Abide by conventions (but still define everything)}
+
+Within some fields, certain notation may be standard.
+
+But still clearly define notation, in particular because
+of the multidisciplinary nature of ecology.
+
+
+\medskip
+
+Established conventions:
+\bi
+\item may be best to try to retain
+\item but maybe not if conventional notation was not well thought-out
+\item can help when learning a new area
+\item multidisciplinary work -- can be hard to retain all conventions (and
+  appease everyone)
+  \ei
 
 \end{frame}
 
@@ -1131,65 +1175,12 @@ Proofreading - mention KH paper
 % notation-rev.tex: take some bits to put into talk, delete un-needed:
 
 
-
-\section*{Guidelines}
-
-
-
-
-
-
-
-
-\subsection*{}
-
-Table~\ref{tab:letters} gives some common mathematical uses of certain letters
-that it is worth being aware of when creating new notation.
-For example, compare the following descriptions:
-
-1. The population size is given by
-\eb
-t_\epsilon = g t_{\epsilon-1} (1 - t_{\epsilon-1}) + f_\epsilon
-\label{screwy}
-\ee
-where $t_\epsilon$ is the population in year
-$\epsilon$ ($\epsilon = 1, 2, 3, ..., \Gamma$), $g$ is the
-intrinsic growth rate at low population size
-and $f_\epsilon$ is normally distributed random noise with mean $\sigma$ and
-variance $\mu^2$.
-
-2. The population size is given by
-\eb
-X_t = r X_{t-1} (1 - X_{t-1}) + \epsilon_t
-\label{sensible}
-\ee
-where $X_t$ is the population in year $t$ ($t = 1, 2, 3, ..., T$), $r$ is the
-intrinsic growth rate at low population size
-and $\epsilon_t$ is normally distributed random noise with mean $\mu$ and
-variance $\sigma^2$.
-
 While the two equations convey the same meaning, the choice of notation
 makes (\ref{screwy}) less understandable than (\ref{sensible}).
 Reading (\ref{screwy}) is quite jarring and requires extra effort for
 the reader (acknowledging that we purposefully chose the notation
 to make such a point).
 
-Within some fields, certain notation may be fairly standard. However,
-notation should still be clearly defined, in particular because
-of the multidisciplinary nature of ecology.
-It may be best to try to retain the established convention of a
-particular field, though this may depend on how well thought-out the
-conventional notation was. If you decide to use non-conventional notation
-then maybe briefly clarify why (which may help convince others and establish
-a new convention). With multidisciplinary work it may be hard to retain all
-conventions (and appease everyone), further emphasising the need to define
-all notation upon first occurrence.
-
-When learning a new subject area the equations can seem
-daunting at first and require careful examination to understand.
-But after reading a number of papers the equations (if
-conventions are established) often become familiar and require less effort to
-understand, as indeed does the subject area in general.
 
 \subsection*{Use parentheses and brackets only as necessary}
 
