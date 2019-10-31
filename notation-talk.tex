@@ -209,7 +209,7 @@ Why us?
 
 Similar backgrounds:
 \bi
-\item all research highly quantitiatve
+\item all research highly quantitative
 \item \blue{lead authors of $>$20 ecological modelling papers}
 \item taught modelling courses to biology students
 \ei
@@ -297,7 +297,7 @@ because:
   \item  work may first appear in a technical document such as a thesis before being
       submitted to a journal
   \item Supporting Information of a paper often contains the full mathematical details of
-models and is not typeset or edited by publishers -- authors are responsibile for
+models and is not typeset or edited by publishers -- authors are responsible for
 clarity
 \ei
 \end{frame}
@@ -569,7 +569,7 @@ Fisheries:
 \bi
   \item $B_\mathrm{MSY}$ -- biomass of a stock at the maximum sustainable yield (MSY)
 \ei
-So MSY is not an index (like $B_t$), but an acroynm that is non-italicised to
+So MSY is not an index (like $B_t$), but an acronym that is non-italicised to
 distinguish from the related $B_t$.
 \pause
 \medskip
@@ -896,7 +896,7 @@ One solution is to simultaneously give equations in word and notation form:
 \centering
 
 \includegraphics[height=2cm]{images/eb96-words.png}\\
-\includegraphics[height=2.5cm]{images/eb96-eqns.png}
+\includegraphics[height=2.8cm]{images/eb96-eqns.png}
 
 
 \end{frame}
@@ -979,7 +979,7 @@ question at hand.
 
 \pause
 
-Normal distribution -- generally no need to explicity specify that
+Normal distribution -- generally no need to explicitly specify that
 $-\infty < x < \infty$.
 
 \end{frame}
@@ -1020,20 +1020,20 @@ Some distributions have a conventional shorthand, e.g.:
 One reason that acronyms or words get used to identify variables may be
 that this is how they are written in computer code.
 
-Using words in code can be helpful because it can make the code easier to read and avoid typographical
-errors.
+\medskip
 
-But words in equations are not recommended.
+Words in code can make code easier to read and avoid typographical errors.
 
-Solutions:
+\medskip
+But words in equations are not recommended. Solutions:
 \bi
 \item write equations first and then have a comment in the corresponding code that links the words used in the code to the
-  corresponding mathematical notation.
-\item modern simpler alternative is the R~package {\tt knitr}
+  corresponding mathematical notation
+\item \red{modern simpler alternative is the R~package {\tt knitr}}
 \item {\tt knitr} interweaves text and computer code in a
-  single file, easily enabling the same succinct notation to be used throughout.
-\item Rmarkdown now allows easy interweaving math, code, write up, references,
-  figures etc.
+  single file, easily enabling the same succinct notation to be used throughout
+\item \red{{\tt Rmarkdown} now allows easy interweaving math, code, write up, references,
+  figures etc.}
 \ei
 
 \end{frame}
@@ -1043,8 +1043,6 @@ Solutions:
 
 \begin{frame}
 \frametitle{8. Give equations of a model rather than just computer code}
-
-TODO add some knitr code
 
 \bi
 \item Writing equations may seem a necessary prerequisite to writing code
@@ -1202,6 +1200,8 @@ where
 
 Within some fields, certain notation may be standard.
 
+\medskip
+
 But still clearly define notation, in particular because
 of the multidisciplinary nature of ecology.
 
@@ -1239,7 +1239,8 @@ Established conventions:
 Parentheses $()$
 \bi
 \item around the arguments of a function, e.g.~$f(x)$
-\item denote which calculations in an equation need to be done first
+\item denote which calculations in an equation need to be done first, e.g. $3 (x
+  + 5)$
 \ei
 
 To avoid too many  many slightly-different sized parentheses also use:
@@ -1250,7 +1251,7 @@ To avoid too many  many slightly-different sized parentheses also use:
 
 \pause
 
-But don't overuse them:
+But don't overuse parentheses:
 \eb
 \nonumber f(x) = \frac{\left(\lambda^x\right) \left(\mbox{e}^{-\lambda}\right)}{x!},
   ~~ x = 0, 1, 2, ...
