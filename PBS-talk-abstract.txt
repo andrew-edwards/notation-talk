@@ -1,0 +1,10 @@
+Some guidance on using mathematical notation in biology
+
+Mathematical modelling is playing an increasing role in studies of biological
+systems. This requires communicating the details of models, including the use
+of mathematical notation to represent biological variables, parameters and
+processes. The clarity of mathematical notation varies between papers and can
+often be inconsistent with general conventions. Poor notation can impede
+communication and understanding of ideas, and make models appear more
+complicated than necessary. I will present some guidelines and examples, all based on
+our recent paper in Methods in Ecology and Evolution (https://t.co/baRCR1Q2hT).
