@@ -8,3 +8,16 @@ often be inconsistent with general conventions. Poor notation can impede
 communication and understanding of ideas, and make models appear more
 complicated than necessary. I will present some guidelines and examples, all based on
 our recent paper in Methods in Ecology and Evolution (https://t.co/baRCR1Q2hT).
+
+Biography: Andrew Edwards has worked at the Pacific Biological Station since 2007,
+first in the Groundfish Section and now in the Quantitative Assessment Methods
+Section. Prior to PBS he worked at the British Antarctic Survey, Dalhousie
+University, the Bedford Institute of Oceanography and Woods Hole Oceanographic
+Institution. He is part of the joint Canada-U.S. team that produces the annual
+Pacific Hake stock assessment, has led several rockfish stock assessments, and
+contributed to the recent synopsis report summarising data for over 100 species
+of groundfish. Current research includes methods for fitting size spectra to
+data on ecological communities, and testing equation-free approaches for including
+environmental effects in advice to fisheries managers. He is on DFO's national
+Ecosystem Approach to Fisheries Management Working Group and also DFO's
+Technical Expertise on Stock Assessment group.
