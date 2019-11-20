@@ -10,3 +10,5 @@ To generate the talk clone this repository and run
 pdflatex notation-talk
 ```
 (or similar latex command).
+
+Similarly, `notation-talk-pbs.tex` is the talk for Pacific Biological Station Seminar Series.
