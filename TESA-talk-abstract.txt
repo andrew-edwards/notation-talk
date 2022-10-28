@@ -1,0 +1,26 @@
+Some guidance on using mathematical notation in biology
+
+Mathematical modelling is playing an increasing role in studies of biological
+systems. At DFO, examples include stock assessments and other analyses that are
+used to provide advice to decision makers. The use of models requires
+effectively communicating their details, including the mathematical notation to
+represent biological variables, parameters, and
+processes. The clarity of mathematical notation varies between papers and can
+often be inconsistent with general conventions. Poor notation can impede
+communication and understanding of ideas, and make models appear more
+complicated than necessary. This talk will cover some guidelines and examples, based on
+our paper in Methods in Ecology and Evolution (https://t.co/baRCR1Q2hT).
+To break up the talk there will be a couple of not-too-serious quizzes.
+
+Biography: Andrew Edwards has worked at the Pacific Biological Station since 2007,
+first in the Groundfish Section and now in the Quantitative Assessment Methods
+Section. Prior to PBS he worked at the British Antarctic Survey, Dalhousie
+University, the Bedford Institute of Oceanography and Woods Hole Oceanographic
+Institution. He is part of the joint Canada-U.S. team that produces the annual
+Pacific Hake stock assessment, has led several rockfish stock assessments, and
+contributed to the recent synopsis report summarising data for over 100 species
+of groundfish. Current research includes methods for fitting size spectra to
+data on ecological communities, and testing equation-free approaches for including
+environmental effects in advice to fisheries managers. He is on DFO's national
+Ecosystem Approach to Fisheries Management Working Group and also DFO's
+Technical Expertise on Stock Assessment group.
